@@ -1,0 +1,17 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background:#FFFDF7; color:#475569; font-family: var(--font-sans), system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+:focus-visible { outline: 3px solid #F5B942; outline-offset: 3px; border-radius: 6px; }
+.eyebrow { @apply text-xs font-semibold uppercase tracking-[.22em] text-royal; }
+.h-display { @apply font-display text-navy tracking-tight; font-variation-settings: "SOFT" 50; }
+.container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12; }
+.btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-7 text-[15px] font-semibold transition duration-300 active:scale-[.97]; }
+.btn-gold { @apply bg-gold text-navy shadow-[0_8px_30px_-8px_rgba(245,185,66,.8)] hover:bg-[#ffc95c] hover:-translate-y-0.5; }
+.btn-ghost { @apply border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm; }
+.btn-navy { @apply bg-navy text-white hover:bg-royal hover:-translate-y-0.5; }
+.no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { scrollbar-width: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(0) } 50% { transform: translateY(-14px) rotate(8deg) } }
+.floaty { animation: floaty 7s ease-in-out infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 38s linear infinite; }
